@@ -6,7 +6,7 @@
 /*   By: mzhukova <mzhukova@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/20 14:58:02 by mzhukova          #+#    #+#             */
-/*   Updated: 2023/11/21 19:05:28 by mzhukova         ###   ########.fr       */
+/*   Updated: 2023/11/28 17:03:20 by mzhukova         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,9 +20,16 @@
 # include <stdlib.h>
 # include "./libft/libft.h"
 
-char	*to_char(char c);
-char	*to_string(const char *s, va_list *args);
-char	*to_s( va_list *args);
+int		to_char(char c);
+int		to_string(const char *s, va_list *args);
+int		to_s(char *str);
+int		to_int(int input);
+int		to_hex(unsigned long long input);
 int		ft_printf(const char *s, ...);
+int		input_len(int input);
+int		to_hexuplow(int c, char typ);
+void	*ft_reverse_string(char *res, int len);
+int		to_undecim(int c);
+char	*convert_num(unsigned int n);
 
 #endif

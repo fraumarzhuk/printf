@@ -6,21 +6,14 @@
 /*   By: mzhukova <mzhukova@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/20 18:56:40 by mzhukova          #+#    #+#             */
-/*   Updated: 2023/11/21 16:58:06 by mzhukova         ###   ########.fr       */
+/*   Updated: 2023/11/28 16:55:47 by mzhukova         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-char	*to_char(char c)
+int	to_char(char c)
 {
-	char	*res;
-
-
-	res = (char *)malloc (2);
-	if (!res)
-		return (NULL);
-	res[0] = c;
-	res[1] = '\0';
-	return (res);
+	write(1, &c, 1);
+	return (1);
 }
