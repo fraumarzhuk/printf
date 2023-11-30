@@ -61,6 +61,7 @@ int	ft_printf(const char *s, ...)
 	return (pr_chars);
 }
 
+// #include <stdio.h>
 // int main()
 // {
 // 	// char *test = "Hello";
@@ -71,8 +72,8 @@ int	ft_printf(const char *s, ...)
 // 	ft_printf("My res: %u\n\n", i);
 
 // 	printf("✨Chars:\n");
-// 	printf(":%d\n", printf("Printfres: %c", '0' +256));
-// 	printf(":%d\n\n", ft_printf("My res: %c", '0' +256));
+// 	printf(":%d\n", printf("Printfres: %c", '0' +250));
+// 	printf(":%d\n\n", ft_printf("My res: %c", '0' +250));
 
 // 	printf("✨Strings:\n");
 // 	printf("Printfres: %s\n", NULL);
@@ -95,12 +96,9 @@ int	ft_printf(const char *s, ...)
 // 	ft_printf("My res: %X\n\n", 57007);
 
 // 	printf("✨Pointers:\n");
-// 	printf("Printfres: %p\n", (void *)-14523);
-// 	ft_printf("My res: %p\n\n", (void *)-14523);
+// 	printf("Printfres: %p\n", (void *)14523);
+// 	ft_printf("My res: %p\n\n", (void *)14523);
 // 	// printf("Printfres: %p\n", 0);
 // 	// ft_printf("My res: %p\n\n", 0);
 
-// 	printf("Printf: %%\n");
-// 	ft_printf("My res: %%\n\n");
-// 	return (0);
 // }

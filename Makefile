@@ -4,7 +4,7 @@
 # CFLAGS = -Wall -Wextra -Werror 
 
 # # Source files for libftprintf.a
-# SRCS = ft_printf.c to_char.c to_s.c to_hexuplow.c ft_reverse_string.c to_undecim.c input_len.c to_int.c to_hex.c
+# SRCS = ft_printf.c to_char.c to_s.c to_hexuplow.c to_undecim.c input_len.c to_int.c to_hex.c
 # OBJS = $(SRCS:.c=.o)
 
 # # Library
@@ -48,7 +48,7 @@
 
 # .PHONY: all clean fclean re
 
-# TO SUBMIT:
+# #TO SUBMIT:
 NAME = libftprintf.a
 CC = cc 
 CFLAGS = -Wall -Wextra -Werror
@@ -57,7 +57,6 @@ SRCS =	ft_printf.c \
 		to_char.c \
 		to_s.c \
 		to_hexuplow.c \
-		ft_reverse_string.c \
 		to_undecim.c \
 		input_len.c \
 		to_int.c \
@@ -69,10 +68,10 @@ OBJS = $(SRCS:.c=.o)
 LIBFT = ./libft/libft.a
 LIBFT_DIR = ./libft
 
+all: $(LIBFT) $(NAME) 
+
 $(LIBFT):
 	$(MAKE) -C $(LIBFT_DIR)
-
-all: $(LIBFT) $(NAME) 
 
 $(NAME): $(OBJS)
 	$(MAKE) -C $(LIBFT_DIR)
@@ -86,6 +85,7 @@ $(EXECUTABLE): $(OBJS)
 clean:
 	rm -f $(OBJS)
 	$(MAKE) -C $(LIBFT_DIR) clean
+
 fclean: clean
 	rm -f $(NAME)
 	$(MAKE) -C $(LIBFT_DIR) fclean
